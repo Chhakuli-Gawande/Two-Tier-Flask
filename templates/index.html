@@ -1,234 +1,314 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suchith K | DevOps Portfolio 🚀</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<title>Welcome to Suchith's Group 🌍</title>
 
-        body {
-            background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 750px;
-            width: 100%;
-            padding: 35px;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-            border: 1px solid rgba(59, 130, 246, 0.25);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+<style>
 
-        .container:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(30, 64, 175, 0.35);
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #60a5fa, #38bdf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
+body{
+background:#f3f6fb;
+color:#333;
+}
 
-        .subtitle {
-            font-size: 1rem;
-            color: #cbd5e1;
-            margin-bottom: 22px;
-        }
+/* HERO SECTION */
 
-        .creator-box {
-            margin-bottom: 22px;
-            padding: 20px;
-            background: rgba(30, 41, 59, 0.7);
-            border-radius: 14px;
-            border: 1px solid rgba(96, 165, 250, 0.2);
-        }
+.hero{
+height:60vh;
+background-image:url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
 
-        .creator-box h2 {
-            font-size: 1.3rem;
-            color: #60a5fa;
-            margin-bottom: 10px;
-        }
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
 
-        .creator-box p {
-            font-size: 0.96rem;
-            color: #e2e8f0;
-            line-height: 1.7;
-        }
+.hero-content{
+position:relative;
+z-index:2;
+}
 
-        .tags {
-            margin-top: 15px;
-        }
+.hero h1{
+font-size:3rem;
+font-weight:700;
+margin-bottom:10px;
+}
 
-        .tag {
-            display: inline-block;
-            margin: 6px;
-            padding: 8px 14px;
-            border-radius: 20px;
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(96, 165, 250, 0.3);
-            color: #bfdbfe;
-            font-size: 0.88rem;
-        }
+.hero p{
+font-size:1.2rem;
+}
 
-        .form-box {
-            margin-top: 20px;
-        }
+/* MAIN CONTAINER */
 
-        input[type="text"] {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid rgba(148, 163, 184, 0.25);
-            background: rgba(15, 23, 42, 0.9);
-            color: #ffffff;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            text-align: center;
-            margin-bottom: 12px;
-        }
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
 
-        input[type="text"]:focus {
-            border-color: #60a5fa;
-            box-shadow: 0 0 12px rgba(96, 165, 250, 0.35);
-            outline: none;
-        }
+/* ABOUT */
 
-        input[type="text"]::placeholder {
-            color: #94a3b8;
-        }
+.about{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+margin-bottom:40px;
+text-align:center;
+}
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 13px;
-            background: linear-gradient(135deg, #2563eb, #38bdf8);
-            color: #ffffff;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+.about h2{
+color:#2563eb;
+margin-bottom:10px;
+}
 
-        input[type="submit"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
-        }
+/* DESTINATIONS */
 
-        .footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
+.destinations h2{
+text-align:center;
+margin-bottom:25px;
+color:#2563eb;
+}
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 22px;
-            }
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-            h1 {
-                font-size: 1.7rem;
-            }
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
 
-            .creator-box h2 {
-                font-size: 1.1rem;
-            }
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
 
-            input[type="text"],
-            input[type="submit"] {
-                font-size: 14px;
-            }
-        }
-    </style>
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+}
+
+/* MESSAGE FORM */
+
+.form-section{
+margin-top:40px;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.form-section h2{
+text-align:center;
+margin-bottom:15px;
+color:#2563eb;
+}
+
+input[type="text"]{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:10px;
+font-size:15px;
+}
+
+input[type="text"]:focus{
+outline:none;
+border-color:#2563eb;
+}
+
+input[type="submit"]{
+width:100%;
+padding:12px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+input[type="submit"]:hover{
+background:#1d4ed8;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+margin-top:30px;
+color:#777;
+}
+
+</style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Suchith K 🚀</h1>
-        <p class="subtitle">DevOps | Cloud | Docker | CI/CD</p>
 
-        <div class="creator-box">
-            <h2>About Me</h2>
-            <p>
-                Hi, I’m <strong>Suchith K</strong>. Welcome to my Flask + MySQL 2-tier application.
-                This page showcases a simple full-stack setup where users can submit messages
-                through the web application and store them in the backend database.
-            </p>
+<!-- HERO SECTION -->
 
-            <div class="tags">
-                <span class="tag">Docker</span>
-                <span class="tag">Flask</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">DevOps</span>
-                <span class="tag">CI/CD</span>
-            </div>
-        </div>
+<div class="hero">
 
-        <div class="form-box">
-            <form id="messageForm">
-                <input type="text" name="new_message" placeholder="Enter your message..." required>
-                <input type="submit" value="Submit Message">
-            </form>
-        </div>
+<div class="hero-content">
 
-        <div class="footer">
-            Built by <strong>Suchith K</strong>
-        </div>
-    </div>
+<h1>Welcome to Suchith's Group 🌍</h1>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#messageForm").on("submit", function (event) {
-                event.preventDefault();
+<p>Discover Beautiful Places & Share Your Journey</p>
 
-                let messageInput = $("input[name='new_message']");
-                let message = messageInput.val().trim();
+</div>
 
-                if (message === "") {
-                    alert("Message cannot be empty!");
-                    return;
-                }
+</div>
 
-                $.ajax({
-                    url: "/submit",
-                    type: "POST",
-                    data: { new_message: message },
-                    success: function (response) {
-                        messageInput.val("");
-                        alert("Message submitted successfully!");
-                    },
-                    error: function (xhr, status, error) {
-                        console.error("AJAX Error:", status, error);
-                        alert("Failed to submit message.");
-                    }
-                });
-            });
-        });
-    </script>
+<div class="container">
+
+<!-- ABOUT -->
+
+<div class="about">
+
+<h2>About Our Travel Community</h2>
+
+<p>
+Suchith's Group is a community for travelers and explorers.  
+Discover amazing destinations, view beautiful places, and share your travel experiences with others.
+</p>
+
+</div>
+
+<!-- DESTINATIONS -->
+
+<div class="destinations">
+
+<h2>Popular Destinations</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Beautiful Beach</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<h3>Mountain Adventure</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+<h3>Forest Escape</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+<h3>City Lights</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- MESSAGE FORM -->
+
+<div class="form-section">
+
+<h2>Share Your Travel Experience</h2>
+
+<form id="messageForm">
+
+<input type="text" name="new_message" placeholder="Share your travel story..." required>
+
+<input type="submit" value="Submit Message">
+
+</form>
+
+</div>
+
+<div class="footer">
+
+Built by <strong>Suchith K</strong>
+
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+$("#messageForm").on("submit",function(event){
+
+event.preventDefault();
+
+let messageInput=$("input[name='new_message']");
+let message=messageInput.val().trim();
+
+if(message===""){
+alert("Message cannot be empty!");
+return;
+}
+
+$.ajax({
+url:"/submit",
+type:"POST",
+data:{new_message:message},
+
+success:function(response){
+messageInput.val("");
+alert("Message submitted successfully!");
+},
+
+error:function(){
+alert("Failed to submit message.");
+}
+
+});
+
+});
+
+});
+
+</script>
+
 </body>
-
 </html>
+```
