@@ -281,13 +281,26 @@ justify-content:center;
 </div>
 
 <!-- CONTACT -->
+<!-- CONTACT -->
 <div class="container">
 <h2 class="section-title">Contact Us</h2>
 
-<form>
-<input type="text" placeholder="Your Message" required>
-<input type="submit" value="Send Message">
+<form action="/submit" method="POST">
+    <input type="text" name="new_message" placeholder="Your Message" required>
+    <input type="submit" value="Send Message">
 </form>
+
+<!-- SHOW MESSAGES -->
+<div style="max-width:500px;margin:auto;margin-top:20px;">
+    <h3>Messages</h3>
+
+    {% for msg in messages %}
+        <div style="background:#fff;padding:10px;margin:5px 0;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+            {{ msg[0] }}
+        </div>
+    {% endfor %}
+</div>
+
 </div>
 
 <!-- FOOTER -->
